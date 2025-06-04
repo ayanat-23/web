@@ -1,0 +1,649 @@
+/* ============= BASE STYLES ============= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;/* ============= HARMONIZED FONT STYLES ============= */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Shared link styles */
+    a {
+        color: #d64c7f;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    a:hover {
+        color: #8f2d56;
+    }
+    
+    /* ============= HARMONIZED NAVBAR STYLES ============= */
+    /* Unified Header/Navbar */
+    header, .navbar-inverse {
+        background-color: white;
+        border: none;
+        box-shadow: 0 2px 10px rgba(214, 76, 127, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+    
+    /* Logo/Brand styling */
+    .navbar-brand, .logo h1 {
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: #fff;
+        margin: 0;
+        padding: 15px 0;
+    }
+    
+    /* Navigation links */
+    .navbar-inverse .navbar-nav > li > a,
+    nav ul li a {
+        color: #c23c6f;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 20px 15px;
+        transition: background-color 0.3s ease;
+        border-radius: 0;
+        
+    }
+    
+    /* Active and hover states */
+    .navbar-inverse .navbar-nav > .active > a,
+    .navbar-inverse .navbar-nav > .active > a:focus,
+    .navbar-inverse .navbar-nav > .active > a:hover,
+    .navbar-inverse .navbar-nav > li > a:hover,
+    nav a:hover, 
+    nav a.active
+    {
+        background-color: #fcddec;
+        color: #c23c6f;
+        
+    }
+    
+    /* Navbar container */
+    header .container, .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Navigation list */
+    nav ul, .navbar-nav {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li, .navbar-nav > li {
+        display: inline-block;
+    }
+    
+    /* Dropdown styling */
+    .dropdown-menu {
+        background-color: #c23c6f;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        margin-top: 0;
+    }
+    
+    .dropdown-menu > li > a {
+        color: #c23c6f;
+        padding: 10px 15px;
+    }
+    
+    .dropdown-menu > li > a:hover {
+        background-color: #0c0709;
+        color: #0c0709;
+    }
+    
+    /* Responsive toggle button */
+    .navbar-inverse .navbar-toggle {
+        border-color: #c23c6f;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .navbar-inverse .navbar-toggle:focus, 
+    .navbar-inverse .navbar-toggle:hover {
+        background-color: #c23c6f;
+    }
+    
+    .navbar-inverse .navbar-collapse, 
+    .navbar-inverse .navbar-form {
+        border-color: #c23c6f;
+    }
+    
+    /* Mobile menu */
+    @media (max-width: 767px) {
+        nav ul, .navbar-nav {
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        nav ul li, .navbar-nav > li {
+            display: block;
+        }
+        
+        .navbar-nav > li > a,
+        nav ul li a {
+            display: block;
+            padding: 12px 15px;
+        }
+        
+        header .container, .navbar .container {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        
+        .navbar-inverse .navbar-collapse {
+            background-color: #fff;
+        }
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Link styles */
+a {
+    color: #d64c7f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8f2d56;
+    text-decoration: none;
+}
+
+/* ============= NAVBAR STYLES ============= */
+/* Custom Navbar Styles */
+.navbar-inverse {
+    background-color: #d64c7f;
+    border-color: #c23c6f;
+    background-size:contain;
+}
+
+/* Navbar text color */
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Keep the original font */
+}
+
+/* Active navbar item */
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #c23c6f;
+    color: #fff;
+}
+
+/* Hover state for navbar items */
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #c23c6f;
+}
+
+/* Brand/logo styling */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Ensure navbar is horizontal */
+.navbar-nav {
+    display: inline-block;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+}
+
+/* Make navbar full width and clean */
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+/* Ensure dropdown menu styling matches */
+.navbar-inverse .navbar-nav > .open > a, 
+.navbar-inverse .navbar-nav > .open > a:focus, 
+.navbar-inverse .navbar-nav > .open > a:hover {
+    background-color: #c23c6f;
+}
+
+.dropdown-menu {
+    background-color: #d64c7f;
+}
+
+.dropdown-menu > li > a {
+    color: #fff;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #c23c6f;
+    color: #fff;
+}
+
+/* Make responsive toggle button match theme */
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-toggle:focus, 
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #c23c6f;
+}
+
+.navbar-inverse .navbar-collapse, 
+.navbar-inverse .navbar-form {
+    border-color: #c23c6f;
+}
+
+/* Fix the spacing for navbar items */
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Ensure Sign Up and Login buttons are properly positioned */
+.navbar-right {
+    margin-right: 0;
+}
+
+/* Ensure clean navbar height */
+.navbar {
+    min-height: 50px;
+}
+
+/* ============= CONTACT PAGE STYLES ============= */
+/* Hero Section */
+.contact-hero {
+    background-color: #fcddec;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.contact-hero h2 {
+    color: #8f2d56;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-hero .lead {
+    margin-bottom: 1.5rem;
+}
+
+/* Custom Bootstrap Overrides */
+.btn-custom-primary {
+    background-color: #d64c7f;
+    border-color: #d64c7f;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: #c23c6f;
+    border-color: #c23c6f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 76, 127, 0.3);
+}
+
+/* Contact Info Card */
+.contact-info-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(214, 76, 127, 0.1);
+}
+
+.contact-content .card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(214, 76, 127, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.contact-content .card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-content h3 {
+    color: #8f2d56;
+    margin-bottom: 1.5rem;
+}
+
+.contact-content h4 {
+    color: #d64c7f;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Contact Icons */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #fcddec;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.contact-icon i {
+    color: #d64c7f;
+    font-size: 1.5rem;
+}
+
+/* Contact Links */
+.contact-link {
+    color: #d64c7f;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 63px;
+}
+
+.contact-link:hover {
+    color: #8f2d56;
+}
+
+/* Form Styles */
+.form-control {
+    height: auto;
+    padding: 10px 12px;
+}
+
+.form-control:focus, 
+.form-select:focus {
+    border-color: #fcddec;
+    box-shadow: 0 0 0 0.25rem rgba(214, 76, 127, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #d64c7f;
+    border-color: #d64c7f;
+}
+
+textarea.form-control {
+    min-height: 150px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* FAQ Accordion */
+
+/* ============= FAQ ACCORDION BUTTONS ============= */
+.faq-accordion {
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(214, 76, 127, 0.1);
+}
+
+.faq-question {
+    background-color: #fcddec;
+    color: #8f2d56;
+    font-weight: 600;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #fad0e6;
+}
+
+.faq-question:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(214, 76, 127, 0.3);
+}
+
+.faq-question.active {
+    background-color: #d64c7f;
+    color: #fff;
+}
+
+.faq-question::after {
+    content: "\002B"; /* Plus sign */
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    content: "\2212"; /* Minus sign */
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    background-color: #fff;
+    padding: 15px;
+    display: none;
+    border-top: 1px solid #fcddec;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+
+/* ============= FOOTER STYLES ============= */
+footer {
+    background-color: #8f2d56;  
+    color: #fff;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-logo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fcddec;  
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #fcddec;  
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #a93f6f;  
+    color: #fcddec;  
+}
+
+/* ============= UTILITY CLASSES ============= */
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;  
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.me-3 {
+    margin-right: 1rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+/* ============= RESPONSIVE STYLES ============= */
+@media (max-width: 768px) {
+    .contact-link {
+        margin-left: 0;
+    }
+    
+    .contact-info-item {
+        text-align: center;
+    }
+    
+    .contact-info-item .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-icon {
+        margin-bottom: 15px;
+    }
+    
+    .footer-content > div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .footer-logo, .footer-links {
+        text-align: center;
+    }
+    
+    /* Responsive navbar */
+    .navbar-nav {
+        margin: 0;
+    }
+    
+    .navbar-inverse .navbar-collapse {
+        background-color: #d64c7f;
+    }
+    
+    /* When collapsed, make items stack */
+    @media (max-width: 767px) {
+        .navbar-nav > li {
+            display: block;
+        }
+    }
+}
+
+/* Fix for row clearing */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Column styles */
+.col-md-5, .col-md-7, .col-lg-8 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .col-md-5 {
+        width: 41.66666667%;
+        float: left;
+    }
+    .col-md-7 {
+        width: 58.33333333%;
+        float: left;
+    }
+    .col-lg-8 {
+        width: 66.66666667%;
+        margin-left: 16.66666667%;
+    }
+}

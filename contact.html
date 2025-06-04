@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub | Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" >
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Contact CSS -->
+    <link rel="stylesheet" href="contact.css">
+    <!-- Custom Navbar CSS -->
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <!-- Updated Horizontal Navbar -->
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">ConnectHub</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="news_feed.html">News Feed</a></li>
+                        <li><a href="friends.html">Friends</a></li>
+                        <li><a href="notifications.html">Notifications</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="profile.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Bootstrap Hero Section -->
+        <section class="py-5 text-center contact-hero">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold mb-3"><i class="fas fa-headset me-2"></i>Contact Us</h2>
+                        <p class="lead mb-4">Have questions or need assistance? We're here to help!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bootstrap Contact Content -->
+        <section class="py-5 contact-content">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Contact Information -->
+                    <div class="col-md-5">
+                        <div class="card contact-info-card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title mb-4">Get in Touch</h3>
+                                
+                                <div class="contact-info-item mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon me-3">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Email Us</h4>
+                                            <p class="mb-0">Our friendly team is here to help.</p>
+                                        </div>
+                                    </div>
+                                    <a href="mailto:support@connecthub.com" class="contact-link">support@connecthub.com</a>
+                                </div>
+                                
+                                <div class="contact-info-item mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon me-3">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Call Us</h4>
+                                            <p class="mb-0">Mon-Fri from 8am to 5pm.</p>
+                                        </div>
+                                    </div>
+                                    <a href="tel:+77024677471" class="contact-link">+7 702 467 7471 </a>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon me-3">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Visit Us</h4>
+                                            <p class="mb-0">Come say hello at our office.</p>
+                                        </div>
+                                    </div>
+                                    <address class="mb-0">
+                                        Expo C1<br>
+                                        Astana <br>
+                                        Kazakhstan
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="col-md-7">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title mb-4">Send us a Message</h3>
+                                <form id="contactForm">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="name">Your Name</label>
+                                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="email">Email Address</label>
+                                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        <label for="subject">Subject</label>
+                                        <select class="form-control" id="subject">
+                                            <option selected disabled value="">Choose...</option>
+                                            <option value="General Inquiry">General Inquiry</option>
+                                            <option value="Technical Support">Technical Support</option>
+                                            <option value="Account Issues">Account Issues</option>
+                                            <option value="Feedback">Feedback</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        <label for="message">Your Message</label>
+                                        <textarea class="form-control" placeholder="Your message" id="message" style="height: 150px"></textarea>
+                                    </div>
+                                    
+                                    <div class="checkbox mb-3">
+                                        <label>
+                                            <input type="checkbox" id="termsCheck"> I agree to the privacy policy and terms of service
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-custom-primary btn-lg btn-block">
+                                            <i class="fas fa-paper-plane"></i> Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h3 class="text-center mb-4">Frequently Asked Questions</h3>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="panel-group" id="faqAccordion">
+
+                            <div class="faq-accordion">
+                                <div class="faq-item">
+                                  <button class="faq-question">How do I reset my password?</button>
+                                  <div class="faq-answer">
+                                    You can reset your password by clicking on the "Forgot Password" link on the login page, or by going to Settings > Account Management > Change Password.
+                                  </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                  <button class="faq-question">How do I change my privacy settings?</button>
+                                  <div class="faq-answer">
+                                    To change your privacy settings, go to your profile page and click on "Privacy Settings" in the menu. From there, you can adjust who can see your posts, profile information, and other privacy options.
+                                  </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                  <button class="faq-question">What should I do if I find inappropriate content?</button>
+                                  <div class="faq-answer">
+                                    If you find inappropriate content, please report it immediately by clicking the "Report" button next to the content. Our moderation team will review all reports and take appropriate action within 24 hours.
+                                  </div>
+                                </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ConnectHub</h3>
+                    <p>Connecting people since 2025</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                        <li><a href="terms_of_service.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="contact.js"></script>
+   
+</body>
+</html>

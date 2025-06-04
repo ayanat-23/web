@@ -1,0 +1,126 @@
+.notifications-stats {
+    font-size: 1.2rem;
+    color: #8f2d56;
+    margin: 15px 0;
+}
+
+.notifications-stats span {
+    font-weight: bold;
+    color: #d64c7f;
+}
+
+.notification-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.notifications-content {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.notifications-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #d64c7f;
+    color: #fff;
+}
+
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.notification-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(214, 76, 127, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s;
+}
+
+.notification-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 76, 127, 0.1);
+}
+
+.notification-item.unread {
+    background-color: #fcf6f9;
+    border-left: 3px solid #d64c7f;
+}
+
+.notification-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-text {
+    margin-bottom: 5px;
+}
+
+.notification-time {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.notification-actions-menu {
+    position: relative;
+}
+
+.notification-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #777;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.load-more {
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .notification-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .notification-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .notifications-filter {
+        justify-content: center;
+    }
+}

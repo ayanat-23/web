@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub |  Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ConnectHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                    <li><a href="news_feed.html">News Feed</a></li>
+                    <li><a href="friends.html">Friends</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>User Profile System</h1>
+        
+        <!-- Authentication Section -->
+        <section id="auth-section">
+            <div id="login-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button onclick="loginUser()">Login</button>
+                <button onclick="toggleForms()" class="secondary-btn toggle-form-trigger">Need to sign up?</button>
+            </div>
+            
+            <div id="register-form" class="hidden">
+                <h2>Register</h2>
+                <div class="form-group">
+                    <label for="reg-username">Username:</label>
+                    <input type="text" id="reg-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-age">Age:</label>
+                    <input type="number" id="reg-age" required>
+                </div>
+                <button onclick="registerUser()">Register</button>
+                <button onclick="toggleForms()" class="secondary-btn toggle-form-trigger">Back to Login</button>
+            </div>
+        </section>
+        
+        <!-- Profile Section -->
+        <section id="profile-section" class="hidden">
+            <h2>Your Profile</h2>
+            <div class="profile-info">
+                <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                <p><strong>Age:</strong> <span id="profile-age"></span></p>
+
+                <!-- START: Music Section -->
+                <div class="profile-music-section">
+                    <button id="music-toggle-button">
+                        <i class="fas fa-music"></i> My Favorite Songs
+                    </button>
+                    <div id="song-selection-container" class="hidden">
+                        <h4>Select a Song:</h4>
+                        <ul>
+                            <li data-song-id="34rRFl0bz9PocxWuO2ca5J">Music To Watch Boys To - Lana Del Rey</li>
+                            <li data-song-id="1Es7AUAhQvapIcoh3qMKDL">Timeless (feat. Playboi Carti) - The Weeknd,Playboi Carti</li>
+                            <li data-song-id="0X2bh8NVQ8svDQIn2AdCbW">Consume (feat. Goon Des Garcons) - Chase Atlantic,GOON DES GARCONS</li>
+                        </ul>
+                    </div>
+                    <div id="spotify-player-container" class="hidden">
+                        <iframe style="border-radius:12px"
+                            id="spotify-embed-player"
+                            src=""
+                            width="100%"
+                            height="152" 
+                            frameBorder="0"
+                            allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+                <!-- END: Music Section -->
+            </div>
+            
+            <button onclick="logout()">Logout</button>
+            
+            <h3>Create New Post</h3>
+            <div class="form-group">
+                <label for="post-content">Post Content:</label>
+                <textarea id="post-content" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="media-upload">Upload Media (Image/Video):</label>
+                <input type="file" id="media-upload" accept="image/*,video/*">
+            </div>
+            <div id="preview-container" class="hidden">
+                <h4>Media Preview:</h4>
+                <img id="image-preview" class="media-preview hidden" src="" alt="Image preview">
+                <video id="video-preview" class="media-preview hidden" controls></video>
+            </div>
+            <button onclick="createPost()">Create Post</button>
+            
+            <h3>Your Posts</h3>
+            <div id="posts-container"></div>
+        </section>
+    </main>
+
+    
+
+    <script src="profile.js"></script>
+</body>
+</html>

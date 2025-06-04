@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub | Friends</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="friends.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="friend-connect.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ConnectHub</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="mainNavMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="news_feed.html">News Feed</a></li>
+                    <li><a href="friends.html" class="active">Friends</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Your Friends</h2>
+                <p>Connect and interact with your friends on ConnectHub!</p>
+                <div id="friendStats" class="friend-stats">
+                    <div class="stat-box">
+                        <span id="friendCount">0</span> <!-- JS will update this -->
+                        <p>Friends</p>
+                    </div>
+                    <div class="stat-box">
+                        <span id="pendingRequests">0</span>
+                        <p>Pending Requests</p>
+                    </div>
+                    <div class="stat-box">
+                        <span id="mutualFriends">0</span> <!-- JS could update this if implemented -->
+                        <p>Mutual Connections</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="friends-content">
+            <div class="container">
+                <div class="friends-filter">
+                    <h3>Friend Management</h3>
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">All Friends</button>
+                        <button class="filter-btn" data-filter="recent">Recently Added</button>
+                        <button class="filter-btn" data-filter="online">Online Now</button>
+                        <button class="filter-btn" data-filter="requests">Friend Requests</button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" id="friendSearch" placeholder="Search friends...">
+                        <button id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div id="friendsListContainer" class="friends-list">
+                </div>
+
+                <div class="add-random-friends">
+                    <h3>Friend Suggestions</h3>
+                    <p>Click the button below to see personalized friend suggestions!</p>
+                    <button id="generateFriendsBtn" class="btn primary">Get Suggestions</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="friend-groups">
+            <div class="container">
+                <h3>Friend Groups</h3>
+                <p>Organize your friends into different groups for easier management.</p>
+                
+                <div class="create-group">
+                    <input type="text" id="newGroupName" placeholder="Enter group name...">
+                    <button id="createGroupBtn" class="btn primary">Create Group</button>
+                </div>
+                
+                <div id="groupsContainer" class="groups-list">
+                    <!-- Group cards could be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ConnectHub</h3>
+                    <p>Connecting people since 2025</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                        <li><a href="terms_of_service.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="jquery-script.js"></script>
+    <script src="friend-connect.js"></script> 
+</body>
+</html>

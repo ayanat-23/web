@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub | Notifications</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="notifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ConnectHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="news_feed.html">News Feed</a></li>
+                    <li><a href="friends.html">Friends</a></li>
+                    <li><a href="notifications.html" class="active">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Your Notifications</h2>
+                <p>Stay updated with all your recent activity and interactions.</p>
+                <div class="notifications-stats">
+                    <span id="notifCount">0</span> unread notifications
+                </div>
+                <div class="notification-actions">
+                    <button id="markAllRead" class="btn secondary">Mark All as Read</button>
+                    <button id="refreshNotifs" class="btn primary">Refresh</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="notifications-content">
+            <div class="container">
+                <div class="notifications-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="unread">Unread</button>
+                    <button class="filter-btn" data-filter="mentions">Mentions</button>
+                    <button class="filter-btn" data-filter="likes">Likes</button>
+                </div>
+                
+                <div id="notificationsContainer" class="notifications-list">
+           
+                </div>
+                
+                <div class="load-more">
+                    <button id="loadMoreBtn" class="btn secondary">Load More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ConnectHub</h3>
+                    <p>Connecting people since 2025</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                        <li><a href="terms_of_service.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="notifications.js"></script>
+    <script src="jquery-notifications.js"></script>
+</body>
+</html>

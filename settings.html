@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub | Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ConnectHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="news_feed.html">News Feed</a></li>
+                    <li><a href="friends.html">Friends</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html" class="active">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="settings-hero">
+            <div class="container">
+                <h2><i class="fas fa-cog"></i> Account Settings</h2>
+                <p>Manage your privacy and account preferences</p>
+            </div>
+        </section>
+
+        <section class="settings-content">
+            <div class="container">
+                <div class="settings-grid">
+                    <!-- Sidebar Navigation -->
+                    <div class="settings-sidebar">
+                        <h3>Settings Menu</h3>
+                        <ul>
+                            <li><a href="#privacy" class="active"><i class="fas fa-lock"></i> Privacy Settings</a></li>
+                            <li><a href="#account"><i class="fas fa-user-cog"></i> Account Management</a></li>
+                            <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+                        
+                        </ul>
+                    </div>
+
+                    <!-- Main Settings Content -->
+                    <div class="settings-main">
+                        <!-- Privacy Settings Section -->
+                        <div id="privacy" class="settings-section">
+                            <h3><i class="fas fa-lock"></i> Privacy Settings</h3>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Profile Visibility</h4>
+                                    <p>Control who can see your profile information</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select name="profile-visibility">
+                                        <option value="public">Public</option>
+                                        <option value="friends">Friends Only</option>
+                                        <option value="private">Private</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Post Privacy</h4>
+                                    <p>Default audience for your posts</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select name="post-privacy">
+                                        <option value="public">Public</option>
+                                        <option value="friends" selected>Friends Only</option>
+                                        <option value="custom">Custom</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Friend Requests</h4>
+                                    <p>Who can send you friend requests</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select name="friend-requests">
+                                        <option value="everyone">Everyone</option>
+                                        <option value="friends-of-friends">Friends of Friends</option>
+                                        <option value="nobody">Nobody</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Data Sharing</h4>
+                                    <p>Allow ConnectHub to use your data for personalized experiences</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Management Section -->
+                        <div id="account" class="settings-section">
+                            <h3><i class="fas fa-user-cog"></i> Account Management</h3>
+                            
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Email Address</h4>
+                                    <p>Change your email address</p>
+                                </div>
+                                <div class="setting-control">
+                                    <input type="email" value="user@example.com">
+                                    <button class="btn primary">Update</button>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Password</h4>
+                                    <p>Change your password</p>
+                                </div>
+                                <div class="setting-control">
+                                    <button class="btn secondary">Change Password</button>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Two-Factor Authentication</h4>
+                                    <p>Add an extra layer of security to your account</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Account Deactivation</h4>
+                                    <p>Temporarily disable your account</p>
+                                </div>
+                                <div class="setting-control">
+                                    <button class="btn danger">Deactivate Account</button>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Delete Account</h4>
+                                    <p>Permanently delete your account and all data</p>
+                                </div>
+                                <div class="setting-control">
+                                    <button class="btn danger">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ConnectHub</h3>
+                    <p>Connecting people since 2025</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                        <li><a href="terms_of_service.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

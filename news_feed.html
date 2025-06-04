@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub | News Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="news_feed.css">
+    <link rel="stylesheet" href="friend-connect.css"> <!-- ADD THIS LINE -->
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ConnectHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="news_feed.html" class="active">News Feed</a></li> <!-- Corrected: news_feed.html -->
+                    <li><a href="friends.html">Friends</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="newsfeed-container">
+            <!-- Main Feed -->
+            <div class="feed-content">
+                <div class="card">
+                    <div class="create-post">
+                        <div class="post-input">
+                            <img src="images/u.jpg" alt="Your Profile" class="post-avatar">
+                            <input type="text" id="post-text" placeholder="What's on your mind?">
+                        </div>
+                        <button id="post-button" class="btn primary">Post</button>
+                    </div>
+                </div>
+                
+                <!-- Trending Topics Card -->
+                <div class="card">
+                    <h3>Trending Topics</h3>
+                    <div class="trends-list">
+                        <div class="trend-item">
+                            <strong>#girls</strong>
+                            <p>20.4k posts</p>
+                        </div>
+                        <div class="trend-item">
+                            <strong>#photoshoot</strong>
+                            <p>18.7K posts</p>
+                        </div>
+                        <div class="trend-item">
+                            <strong>#sea</strong>
+                            <p>12.4K posts</p>
+                        </div>
+                        <div class="trend-item">
+                            <strong>#coffeelovers</strong>
+                            <p>9.2K posts</p>
+                        </div>
+                        <div class="trend-item">
+                            <strong>#travelphotography</strong>
+                            <p>7.8K posts</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Friend Suggestions Card -->
+                <div class="card">
+                    <h3>Friend Suggestions</h3>
+                    <div class="friend-suggestions">
+                        <div class="friend-suggestion">
+                            <img src="images/s.jpg" alt="Friend" class="friend-avatar">
+                            <div>
+                                <h4>sabynzhan</h4>
+                                <p>3 mutual friends</p>
+                            </div>
+                            <button class="btn primary btn-sm" data-friend-id="205">Add</button> <!-- MODIFIED: Added data-friend-id -->
+                        </div>
+                        <div class="friend-suggestion">
+                            <img src="images/g.jpg" alt="Friend" class="friend-avatar">
+                            <div>
+                                <h4>qasholiq</h4>
+                                <p>5 mutual friends</p>
+                            </div>
+                            <button class="btn primary btn-sm" data-friend-id="206">Add</button> <!-- MODIFIED: Added data-friend-id -->
+                        </div>
+                        <div class="friend-suggestion">
+                            <img src="images/a.jpg" alt="Friend" class="friend-avatar">
+                            <div>
+                                <h4>ayyyannat1</h4>
+                                <p>1 mutual friend</p>
+                            </div>
+                            <button class="btn primary btn-sm" data-friend-id="207">Add</button> <!-- MODIFIED: Added data-friend-id -->
+                        </div>
+                        <div class="friend-suggestion">
+                            <img src="images/i.jpg" alt="Friend" class="friend-avatar">
+                            <div>
+                                <h4>tlebaldinaa_</h4>
+                                <p>2 mutual friends</p>
+                            </div>
+                            <button class="btn primary btn-sm" data-friend-id="208">Add</button> <!-- MODIFIED: Added data-friend-id -->
+                        </div>
+                    </div>
+                    <a href="#" class="see-all">See All Suggestions</a>
+                </div>
+                
+                <!-- Upcoming Events Card -->
+                <div class="card">
+                    <h3>Upcoming Events</h3>
+                    <div class="events-list">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="month">APR</div>
+                                <div class="day">22</div>
+                            </div>
+                            <div class="event-info">
+                                <h4>Eurasian Fashion Week </h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Almaty , Kazakhstan</p>
+                                <p>5 friends going</p>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <div class="month">AUG</div>
+                                <div class="day">1</div>
+                            </div>
+                            <div class="event-info">
+                                <h4>Up All Night by Jennifer Lopez</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Astana , Kazakhstan</p>
+                                <p>10 friends going</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="see-all">See All Events</a>
+                </div>
+                
+                <div id="posts-container">
+                    <!-- Dynamic posts will be added here via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ConnectHub</h3>
+                    <p>Connecting people since 2025</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                        <li><a href="terms_of_service.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="news_feed.js"></script>
+    <script src="friend-connect.js"></script> <!-- ADD THIS LINE -->
+</body>
+</html>
